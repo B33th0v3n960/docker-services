@@ -1,0 +1,19 @@
+services:
+  full-test-rss:
+    image: heussd/fivefilters-full-text-rss:latest
+    restart: always
+    ports:
+      - 50000:80
+  freshrss:
+    image: lscr.io/linuxserver/freshrss:latest
+    container_name: freshrss
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+    ports:
+      - "49999:80"
+    volumes:
+      - /path/to/data:/config
+    restart: unless-stopped
+

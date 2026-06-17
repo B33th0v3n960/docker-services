@@ -1,0 +1,15 @@
+serverAddr = "XXX.XXX.XXX.XXX"
+serverPort = 7000
+
+auth.method = "token"
+auth.token = "XXXXXX"
+
+webServer.addr = "127.0.0.1"   # enables hot-reload, see below
+webServer.port = 7400
+
+[[proxies]]
+name = "ssh"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 22
+remotePort = 60000

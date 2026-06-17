@@ -1,0 +1,14 @@
+bindPort = 7000
+
+auth.method = "token"
+auth.token = "XXXXXX"
+
+# restrict which ports clients are allowed to request
+allowPorts = [
+  { start = 60000, end = 60100 }
+]
+
+webServer.addr = "127.0.0.1"   # dashboard, don't expose publicly
+webServer.port = 7500
+webServer.user = "admin"
+webServer.password = "CHANGE_ME"
